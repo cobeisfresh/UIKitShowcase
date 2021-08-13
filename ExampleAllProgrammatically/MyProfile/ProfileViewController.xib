@@ -33,7 +33,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7u7-0I-2O9">
-                    <rect key="frame" x="359" y="232.5" width="35" height="35"/>
+                    <rect key="frame" x="359" y="252.5" width="35" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="35" id="QFh-9f-HT0"/>
                         <constraint firstAttribute="height" constant="35" id="jGy-Eq-GA3"/>
@@ -49,7 +49,7 @@
             <accessibility key="accessibilityConfiguration" identifier="ProfileView"/>
             <constraints>
                 <constraint firstItem="nac-xo-etR" firstAttribute="top" secondItem="daQ-o0-lZb" secondAttribute="bottom" constant="-75" id="8fg-Mt-w92"/>
-                <constraint firstItem="7u7-0I-2O9" firstAttribute="centerY" secondItem="daQ-o0-lZb" secondAttribute="centerY" constant="100" id="Apc-t9-9p9"/>
+                <constraint firstItem="7u7-0I-2O9" firstAttribute="centerY" secondItem="daQ-o0-lZb" secondAttribute="centerY" constant="120" id="Apc-t9-9p9"/>
                 <constraint firstItem="7u7-0I-2O9" firstAttribute="leading" secondItem="daQ-o0-lZb" secondAttribute="trailing" constant="-55" id="Epf-zP-0hB"/>
                 <constraint firstItem="daQ-o0-lZb" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Hsb-JH-XEf"/>
                 <constraint firstItem="daQ-o0-lZb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LXS-mu-cPB"/>

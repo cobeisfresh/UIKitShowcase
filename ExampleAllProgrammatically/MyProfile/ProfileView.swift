@@ -54,9 +54,7 @@ class ProfileView: UIView {
         profileImage.contentMode = .scaleAspectFit
         profileImage.makeRounded()
         
-        settingsButton.setImage(UIImage(named: "sett"), for: .normal)
-//        settingsButton.addTarget(self, action: #selector(tapOnSettingsButton), for: .touchUpInside)
-//        settingsButton.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
+        settingsButton.setImage(UIImage(named: "setWhite"), for: .normal)
         addSubview(settingsButton)
         
         addSubview(backgroundView)
@@ -164,12 +162,7 @@ class ProfileView: UIView {
         }
     }
     
-    @objc func tapOnSettingsButton() {
-        onSettingsTapped?()
-    }
-    
     @IBAction func settingsButtonTapped(_ sender: Any) {
-        print("tappp")
         onSettingsTapped?()
     }
     

@@ -10,6 +10,8 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var settingsTableView: UITableView!
+    @IBOutlet weak var navigationView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     let settings: [String] = [ "Login", "PIN", "Language", "Font", "Theme"]
     
@@ -21,11 +23,22 @@ class SettingsViewController: UIViewController {
         settingsTableView.dataSource = self
         
         registerNib()
+        setupView()
     }
     
-    func registerNib() {
+    private func registerNib() {
         settingsTableView.register(UINib(nibName: "SettingsTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingsTableViewCell")
     }
+    
+    private func setupView() {
+        settingsTableView.backgroundColor = .black
+        navigationView.backgroundColor = .black
+        titleLabel.text = "Settings"
+        titleLabel.textColor = .white
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 30.0)
+    }
+    
 }
 
 
@@ -49,7 +62,9 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell: SettingsTableViewCell! = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell") as? SettingsTableViewCell
+        let cell: SettingsTableViewCell! = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell") as? SettingsTableViewCell
+        
+        dismiss(animated: true, completion: nil)
     
     }
 }

@@ -11,10 +11,10 @@ class SettingsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        backgroundColor = .black
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,6 +25,8 @@ class SettingsTableViewCell: UITableViewCell {
     
     func setupView(label: String) {
         titleLabel.text = label
+        titleLabel.backgroundColor = .black
+        titleLabel.textColor = .white
     }
     
 }
