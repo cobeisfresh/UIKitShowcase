@@ -10,9 +10,7 @@ import UIKit
 class CreateProfileViewController: UIViewController {
     
     private lazy var createProfileView = CreateProfileView()
-    static var profile = Profile()
-    
-    
+
     override func loadView() {
         view = createProfileView
     }
@@ -38,11 +36,8 @@ class CreateProfileViewController: UIViewController {
     
     private func addCallBacks() {
         createProfileView.onCreateTapped = { [weak self] name, email, pass in
-            CreateProfileViewController.profile = Profile(name: name, email: email, password: pass)
-            let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-//            vc.profile = CreateProfileViewController.profile
-            ///
-//            vc.profileView.recivedName = name
+            let profile = Profile(name: name, email: email, password: pass)
+            let vc = ProfileViewController(profile: profile)
             self?.navigationController?.pushViewController(vc, animated: true)
             
         }

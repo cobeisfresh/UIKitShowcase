@@ -212,7 +212,7 @@ class CreateProfileView: UIView {
     }
     
     @objc func createTapped() {
-        onCreateTapped?(nameTextField.text!, emailTextField.text!, passwordTextField.text!)
+        onCreateTapped?(nameTextField.text ?? "", emailTextField.text ?? "", passwordTextField.text ?? "")
     }
     
     @objc func showPasswordTapped() {

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" customClass="ProfileViewController" customModule="ExampleAllProgrammatically" customModuleProvider="target">
             <connections>
+                <outlet property="profileRealView" destination="i5M-Pr-FkT" id="4iy-eh-vh8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="fFe-h7-mzu"/>
             </connections>
         </placeholder>

@@ -20,13 +20,12 @@ class ProfileView: UIView {
     private lazy var nameLabel = UILabel()
     private lazy var emailLabel = UILabel()
     private lazy var passwordLabel = UILabel()
-    
-    var recivedName: String = ""
-    var recivedEmail: String = ""
-    var recivedPassword: String = ""
-    
-    
-    let profile = CreateProfileViewController.profile
+        
+    func setProfile(profile: Profile) {
+        nameLabel.text = profile.name
+        emailLabel.text = profile.email
+        passwordLabel.text = profile.password
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -51,7 +50,6 @@ class ProfileView: UIView {
         profileImage.contentMode = .scaleAspectFit
         profileImage.makeRounded()
         
-        //
         addSubview(backgroundView)
         
         backgroundImage.image = UIImage(named: "backgroundImage")
@@ -63,21 +61,20 @@ class ProfileView: UIView {
         backgroundImage.addSubview(profileView)
         
         nameLabel.text = "sasa"
-//        nameLabel.text = recivedName
-        nameLabel.text = profile.name
+        
         nameLabel.font = UIFont.boldSystemFont(ofSize: 30.0)
         nameLabel.textAlignment = .center
         nameLabel.backgroundColor = .white
         nameLabel.layer.cornerRadius = 10
         profileView.addSubview(nameLabel)
         emailLabel.text = "sasa@gmail.com"
-        emailLabel.text = profile.email
+        
         emailLabel.textAlignment = .center
         emailLabel.backgroundColor = .white
         emailLabel.layer.cornerRadius = 25
         profileView.addSubview(emailLabel)
         passwordLabel.text = "12345"
-        passwordLabel.text = profile.password
+        
         passwordLabel.textAlignment = .center
         passwordLabel.backgroundColor = .white
         passwordLabel.layer.cornerRadius = 25
