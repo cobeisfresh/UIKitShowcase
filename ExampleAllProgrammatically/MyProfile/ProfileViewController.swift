@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet var profileRealView: ProfileView!
+    
     let profile: Profile
     
     init(profile: Profile) {
@@ -20,13 +22,20 @@ class ProfileViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @IBOutlet var profileRealView: ProfileView!
-    //var profileView = ProfileView()
-    //var profile: Profile!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         profileRealView.setProfile(profile: profile)
+        
+        addCallbacks()
+    }
+    
+    private func addCallbacks() {
+        profileRealView.onSettingsTapped = { [weak self] in
+            
+            let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SettingsViewController")
+            self?.present(vc, animated: true)
+        }
     }
     
 }

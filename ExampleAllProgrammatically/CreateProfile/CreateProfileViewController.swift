@@ -39,7 +39,6 @@ class CreateProfileViewController: UIViewController {
             let profile = Profile(name: name, email: email, password: pass)
             let vc = ProfileViewController(profile: profile)
             self?.navigationController?.pushViewController(vc, animated: true)
-            
         }
     }
 }

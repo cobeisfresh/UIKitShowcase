@@ -12,6 +12,7 @@ class ProfileView: UIView {
 
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var settingsButton: UIButton!
     
    
     private lazy var profileView = UIView()
@@ -20,6 +21,9 @@ class ProfileView: UIView {
     private lazy var nameLabel = UILabel()
     private lazy var emailLabel = UILabel()
     private lazy var passwordLabel = UILabel()
+    
+    var onSettingsTapped: (()->Void)?
+    
         
     func setProfile(profile: Profile) {
         nameLabel.text = profile.name
@@ -49,6 +53,11 @@ class ProfileView: UIView {
         profileImage.image = UIImage(named: "rick")
         profileImage.contentMode = .scaleAspectFit
         profileImage.makeRounded()
+        
+        settingsButton.setImage(UIImage(named: "sett"), for: .normal)
+//        settingsButton.addTarget(self, action: #selector(tapOnSettingsButton), for: .touchUpInside)
+//        settingsButton.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
+        addSubview(settingsButton)
         
         addSubview(backgroundView)
         
@@ -80,6 +89,7 @@ class ProfileView: UIView {
         passwordLabel.layer.cornerRadius = 25
         profileView.addSubview(passwordLabel)
     
+        
     }
     
     private func setupConstraints() {
@@ -94,6 +104,12 @@ class ProfileView: UIView {
             backgroundImage.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: 0),
             backgroundImage.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 0),
             backgroundImage.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant:0),
+            
+//            settingsButton.heightAnchor.constraint(equalToConstant: 35),
+//            settingsButton.widthAnchor.constraint(equalToConstant: 35),
+//            settingsButton.topAnchor.constraint(equalTo: profileView.bottomAnchor, constant: -30),
+//            settingsButton.trailingAnchor.constraint(equalTo: profileView.trailingAnchor, constant: -30),
+            
             
 //            profileView.topAnchor.constraint(equalTo: backgroundImage.topAnchor, constant: 50),
 //            profileView.bottomAnchor.constraint(equalTo: backgroundImage.bottomAnchor, constant: -30),
@@ -147,4 +163,14 @@ class ProfileView: UIView {
             myPasswordLabel.trailing.equalTo(profileView.snp.trailing).offset(-50)
         }
     }
+    
+    @objc func tapOnSettingsButton() {
+        onSettingsTapped?()
+    }
+    
+    @IBAction func settingsButtonTapped(_ sender: Any) {
+        print("tappp")
+        onSettingsTapped?()
+    }
+    
 }

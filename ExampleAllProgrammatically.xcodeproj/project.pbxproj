@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6DD5AA865F4C84B1B73EF0AD /* Pods_ExampleAllProgrammatically.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2875B386C84268CC5C4D82 /* Pods_ExampleAllProgrammatically.framework */; };
+		C549103B26C66E2300FBE5DC /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C549103A26C66E2300FBE5DC /* Settings.storyboard */; };
+		C549103F26C6700100FBE5DC /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549103D26C6700100FBE5DC /* SettingsTableViewCell.swift */; };
+		C549104026C6700100FBE5DC /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C549103E26C6700100FBE5DC /* SettingsTableViewCell.xib */; };
+		C549104226C6705300FBE5DC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549104126C6705300FBE5DC /* SettingsViewController.swift */; };
 		C5FD2D5626C3B7B3001D66DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD2D5526C3B7B3001D66DF /* AppDelegate.swift */; };
 		C5FD2D5826C3B7B3001D66DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD2D5726C3B7B3001D66DF /* SceneDelegate.swift */; };
 		C5FD2D5A26C3B7B3001D66DF /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD2D5926C3B7B3001D66DF /* CreateProfileViewController.swift */; };
@@ -27,6 +31,10 @@
 /* Begin PBXFileReference section */
 		0E2875B386C84268CC5C4D82 /* Pods_ExampleAllProgrammatically.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleAllProgrammatically.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BE494EA82CABFC91F2955B /* Pods-ExampleAllProgrammatically.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleAllProgrammatically.debug.xcconfig"; path = "Target Support Files/Pods-ExampleAllProgrammatically/Pods-ExampleAllProgrammatically.debug.xcconfig"; sourceTree = "<group>"; };
+		C549103A26C66E2300FBE5DC /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		C549103D26C6700100FBE5DC /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		C549103E26C6700100FBE5DC /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		C549104126C6705300FBE5DC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C5FD2D5226C3B7B3001D66DF /* ExampleAllProgrammatically.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleAllProgrammatically.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FD2D5526C3B7B3001D66DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5FD2D5726C3B7B3001D66DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,11 +83,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C549103726C548CA00FBE5DC /* Friends */ = {
+		C549103926C66E0100FBE5DC /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				C549103C26C66FEB00FBE5DC /* Cell */,
+				C549104126C6705300FBE5DC /* SettingsViewController.swift */,
+				C549103A26C66E2300FBE5DC /* Settings.storyboard */,
 			);
-			path = Friends;
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C549103C26C66FEB00FBE5DC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C549103D26C6700100FBE5DC /* SettingsTableViewCell.swift */,
+				C549103E26C6700100FBE5DC /* SettingsTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C5FD2D4926C3B7B3001D66DF = {
@@ -108,7 +128,7 @@
 				C549103526C5449000FBE5DC /* Model */,
 				C5FD2D6C26C3BBDB001D66DF /* CreateProfile */,
 				C5FD2D7226C3D36E001D66DF /* MyProfile */,
-				C549103726C548CA00FBE5DC /* Friends */,
+				C549103926C66E0100FBE5DC /* Settings */,
 				C5FD2D6F26C3BF7D001D66DF /* Extensions */,
 				C5FD2D5B26C3B7B3001D66DF /* Main.storyboard */,
 				C5FD2D6126C3B7B5001D66DF /* Assets.xcassets */,
@@ -214,10 +234,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C549104026C6700100FBE5DC /* SettingsTableViewCell.xib in Resources */,
 				C5FD2D6526C3B7B5001D66DF /* LaunchScreen.storyboard in Resources */,
 				C5FD2D6226C3B7B5001D66DF /* Assets.xcassets in Resources */,
 				C5FD2D8B26C3FC3B001D66DF /* ProfileViewController.xib in Resources */,
 				C5FD2D5D26C3B7B3001D66DF /* Main.storyboard in Resources */,
+				C549103B26C66E2300FBE5DC /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,10 +298,12 @@
 				C5FD2D8A26C3FC3B001D66DF /* ProfileViewController.swift in Sources */,
 				C5FD2D6026C3B7B3001D66DF /* ExampleAllProgrammatically.xcdatamodeld in Sources */,
 				C5FD2D5A26C3B7B3001D66DF /* CreateProfileViewController.swift in Sources */,
+				C549103F26C6700100FBE5DC /* SettingsTableViewCell.swift in Sources */,
 				C5FD2D7126C3BF9C001D66DF /* ConstarintsExtensions.swift in Sources */,
 				C5FD2D6E26C3BC43001D66DF /* CreateProfileView.swift in Sources */,
 				C5FD2D5626C3B7B3001D66DF /* AppDelegate.swift in Sources */,
 				C5FD2D5826C3B7B3001D66DF /* SceneDelegate.swift in Sources */,
+				C549104226C6705300FBE5DC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
