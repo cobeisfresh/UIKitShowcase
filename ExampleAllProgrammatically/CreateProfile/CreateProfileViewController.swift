@@ -37,7 +37,7 @@ class CreateProfileViewController: UIViewController {
     }
     
     private func addCallBacks() {
-        createProfileView.onSaveTapped = { [weak self] name, email, pass in
+        createProfileView.onCreateTapped = { [weak self] name, email, pass in
             CreateProfileViewController.profile = Profile(name: name, email: email, password: pass)
             let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
 //            vc.profile = CreateProfileViewController.profile

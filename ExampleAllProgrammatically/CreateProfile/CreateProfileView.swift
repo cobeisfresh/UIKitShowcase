@@ -24,8 +24,7 @@ class CreateProfileView: UIView {
     private lazy var createButton = UIButton(type: .system)
     
     private var themeColor = UIColor.lightGray.withAlphaComponent(0.7)
-    private var timer = Timer()
-    var onSaveTapped: ((String, String, String)->Void)?
+    var onCreateTapped: ((String, String, String)->Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -213,7 +212,7 @@ class CreateProfileView: UIView {
     }
     
     @objc func createTapped() {
-        onSaveTapped?(nameTextField.text!, emailTextField.text!, passwordTextField.text!)
+        onCreateTapped?(nameTextField.text!, emailTextField.text!, passwordTextField.text!)
     }
     
     @objc func showPasswordTapped() {

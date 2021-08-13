@@ -26,7 +26,7 @@ class ProfileView: UIView {
     var recivedPassword: String = ""
     
     
-    let pro = CreateProfileViewController.profile
+    let profile = CreateProfileViewController.profile
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -64,20 +64,20 @@ class ProfileView: UIView {
         
         nameLabel.text = "sasa"
 //        nameLabel.text = recivedName
-        nameLabel.text = pro.name
+        nameLabel.text = profile.name
         nameLabel.font = UIFont.boldSystemFont(ofSize: 30.0)
         nameLabel.textAlignment = .center
         nameLabel.backgroundColor = .white
         nameLabel.layer.cornerRadius = 10
         profileView.addSubview(nameLabel)
         emailLabel.text = "sasa@gmail.com"
-        emailLabel.text = pro.email
+        emailLabel.text = profile.email
         emailLabel.textAlignment = .center
         emailLabel.backgroundColor = .white
         emailLabel.layer.cornerRadius = 25
         profileView.addSubview(emailLabel)
         passwordLabel.text = "12345"
-        passwordLabel.text = pro.password
+        passwordLabel.text = profile.password
         passwordLabel.textAlignment = .center
         passwordLabel.backgroundColor = .white
         passwordLabel.layer.cornerRadius = 25
