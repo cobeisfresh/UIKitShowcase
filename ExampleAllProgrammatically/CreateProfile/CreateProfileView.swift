@@ -15,11 +15,11 @@ class CreateProfileView: UIView {
     private lazy var titleLabel = UILabel()
     private lazy var createProfileView = UIView()
     private lazy var nameLabel = UILabel()
-    private lazy var nameTextField = UITextField()
+    lazy var nameTextField = UITextField()
     private lazy var emailLabel = UILabel()
     lazy var emailTextField = UITextField()
     private lazy var passwordLabel = UILabel()
-    private lazy var passwordTextField = UITextField()
+    lazy var passwordTextField = UITextField()
     private lazy var showPasswordButton = UIButton(type: .system)
     private lazy var createButton = UIButton(type: .system)
     

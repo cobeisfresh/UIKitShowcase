@@ -23,6 +23,13 @@ class CreateProfileViewController: UIViewController {
         addCallBacks()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createProfileView.nameTextField.text = ""
+        createProfileView.emailTextField.text = ""
+        createProfileView.passwordTextField.text = ""
+    }
+    
     private func setupNavigationBar() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -34,6 +41,8 @@ class CreateProfileViewController: UIViewController {
             CreateProfileViewController.profile = Profile(name: name, email: email, password: pass)
             let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
 //            vc.profile = CreateProfileViewController.profile
+            ///
+//            vc.profileView.recivedName = name
             self?.navigationController?.pushViewController(vc, animated: true)
             
         }
