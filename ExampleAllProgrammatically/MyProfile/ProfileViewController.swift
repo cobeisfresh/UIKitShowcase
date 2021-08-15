@@ -31,7 +31,6 @@ class ProfileViewController: UIViewController {
     
     private func addCallbacks() {
         profileRealView.onSettingsTapped = { [weak self] in
-            
             let storyboard = UIStoryboard(name: "Settings", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "SettingsViewController")
             self?.present(vc, animated: true)

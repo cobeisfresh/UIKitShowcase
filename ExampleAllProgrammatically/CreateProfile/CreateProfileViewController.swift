@@ -23,9 +23,7 @@ class CreateProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        createProfileView.nameTextField.text = ""
-        createProfileView.emailTextField.text = ""
-        createProfileView.passwordTextField.text = ""
+        createProfileView.cleanTextFields()
     }
     
     private func setupNavigationBar() {

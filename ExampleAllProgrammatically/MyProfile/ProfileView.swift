@@ -14,7 +14,6 @@ class ProfileView: UIView {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var settingsButton: UIButton!
     
-   
     private lazy var profileView = UIView()
     private lazy var backgroundView = UIView()
     private lazy var backgroundImage = UIImageView()
@@ -24,12 +23,6 @@ class ProfileView: UIView {
     
     var onSettingsTapped: (()->Void)?
     
-        
-    func setProfile(profile: Profile) {
-        nameLabel.text = profile.name
-        emailLabel.text = profile.email
-        passwordLabel.text = profile.password
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,7 +31,6 @@ class ProfileView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -57,6 +49,8 @@ class ProfileView: UIView {
         settingsButton.setImage(UIImage(named: "setWhite"), for: .normal)
         addSubview(settingsButton)
         
+        
+        ///
         addSubview(backgroundView)
         
         backgroundImage.image = UIImage(named: "backgroundImage")
@@ -68,31 +62,27 @@ class ProfileView: UIView {
         backgroundImage.addSubview(profileView)
         
         nameLabel.text = "sasa"
-        
         nameLabel.font = UIFont.boldSystemFont(ofSize: 30.0)
         nameLabel.textAlignment = .center
         nameLabel.backgroundColor = .white
         nameLabel.layer.cornerRadius = 10
         profileView.addSubview(nameLabel)
-        emailLabel.text = "sasa@gmail.com"
         
+        emailLabel.text = "sasa@gmail.com"
         emailLabel.textAlignment = .center
         emailLabel.backgroundColor = .white
         emailLabel.layer.cornerRadius = 25
         profileView.addSubview(emailLabel)
-        passwordLabel.text = "12345"
         
+        passwordLabel.text = "12345"
         passwordLabel.textAlignment = .center
         passwordLabel.backgroundColor = .white
         passwordLabel.layer.cornerRadius = 25
         profileView.addSubview(passwordLabel)
-    
-        
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.useAndActivateConstraints(constraints: [
-            
             backgroundView.topAnchor.constraint(equalTo: coverImageView.bottomAnchor, constant: 0),
             backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
             backgroundView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
@@ -160,6 +150,12 @@ class ProfileView: UIView {
             myPasswordLabel.leading.equalTo(profileView.snp.leading).offset(50)
             myPasswordLabel.trailing.equalTo(profileView.snp.trailing).offset(-50)
         }
+    }
+    
+    func setProfile(profile: Profile) {
+        nameLabel.text = profile.name
+        emailLabel.text = profile.email
+        passwordLabel.text = profile.password
     }
     
     @IBAction func settingsButtonTapped(_ sender: Any) {

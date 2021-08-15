@@ -15,11 +15,11 @@ class CreateProfileView: UIView {
     private lazy var titleLabel = UILabel()
     private lazy var createProfileView = UIView()
     private lazy var nameLabel = UILabel()
-    lazy var nameTextField = UITextField()
+    private lazy var nameTextField = UITextField()
     private lazy var emailLabel = UILabel()
-    lazy var emailTextField = UITextField()
+    private lazy var emailTextField = UITextField()
     private lazy var passwordLabel = UILabel()
-    lazy var passwordTextField = UITextField()
+    private lazy var passwordTextField = UITextField()
     private lazy var showPasswordButton = UIButton(type: .system)
     private lazy var createButton = UIButton(type: .system)
     
@@ -35,6 +35,7 @@ class CreateProfileView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+
     private func configure() {
         setupView()
         setupConstraints()
@@ -131,7 +132,6 @@ class CreateProfileView: UIView {
         
     }
     
-    
     private func setupConstraints() {
         NSLayoutConstraint.useAndActivateConstraints(constraints: [
             backgroundImage.topAnchor.constraint(equalTo: topAnchor, constant: 0),
@@ -209,6 +209,12 @@ class CreateProfileView: UIView {
             createButton.trailingAnchor.constraint(equalTo: createProfileView.trailingAnchor, constant: -50),
             createButton.bottomAnchor.constraint(equalTo: createProfileView.bottomAnchor, constant: -30),
         ])
+    }
+    
+    func cleanTextFields() {
+        nameTextField.text = ""
+        emailTextField.text = ""
+        passwordTextField.text = ""
     }
     
     @objc func createTapped() {

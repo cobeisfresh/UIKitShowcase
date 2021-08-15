@@ -13,7 +13,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     
-    let settings: [String] = [ "Login", "PIN", "Language", "Font", "Theme"]
+    let settings: [String] = [ "Login", "Setup PIN", "Language", "Change Font", "Theme"]
     
     
     override func viewDidLoad() {
