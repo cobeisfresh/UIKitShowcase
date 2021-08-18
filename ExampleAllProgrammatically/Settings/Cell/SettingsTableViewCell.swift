@@ -14,6 +14,7 @@ class SettingsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        contentView.backgroundColor = .black
         backgroundColor = .black
     }
 

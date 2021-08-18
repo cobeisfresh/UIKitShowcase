@@ -12,6 +12,10 @@
 		C549103F26C6700100FBE5DC /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549103D26C6700100FBE5DC /* SettingsTableViewCell.swift */; };
 		C549104026C6700100FBE5DC /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C549103E26C6700100FBE5DC /* SettingsTableViewCell.xib */; };
 		C549104226C6705300FBE5DC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549104126C6705300FBE5DC /* SettingsViewController.swift */; };
+		C549108B26CCEF0100FBE5DC /* PartOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549108926CCEF0100FBE5DC /* PartOneViewController.swift */; };
+		C549108C26CCEF0100FBE5DC /* PartOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C549108A26CCEF0100FBE5DC /* PartOneViewController.xib */; };
+		C549109026CCEF4600FBE5DC /* PartTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549108F26CCEF4600FBE5DC /* PartTwoViewController.swift */; };
+		C549109226CCEF5700FBE5DC /* PartTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549109126CCEF5700FBE5DC /* PartTwoView.swift */; };
 		C5FD2D5626C3B7B3001D66DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD2D5526C3B7B3001D66DF /* AppDelegate.swift */; };
 		C5FD2D5826C3B7B3001D66DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD2D5726C3B7B3001D66DF /* SceneDelegate.swift */; };
 		C5FD2D5A26C3B7B3001D66DF /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD2D5926C3B7B3001D66DF /* CreateProfileViewController.swift */; };
@@ -35,6 +39,10 @@
 		C549103D26C6700100FBE5DC /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		C549103E26C6700100FBE5DC /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		C549104126C6705300FBE5DC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C549108926CCEF0100FBE5DC /* PartOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOneViewController.swift; sourceTree = "<group>"; };
+		C549108A26CCEF0100FBE5DC /* PartOneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartOneViewController.xib; sourceTree = "<group>"; };
+		C549108F26CCEF4600FBE5DC /* PartTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoViewController.swift; sourceTree = "<group>"; };
+		C549109126CCEF5700FBE5DC /* PartTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoView.swift; sourceTree = "<group>"; };
 		C5FD2D5226C3B7B3001D66DF /* ExampleAllProgrammatically.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleAllProgrammatically.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FD2D5526C3B7B3001D66DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5FD2D5726C3B7B3001D66DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +110,33 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		C549108426CCEE5B00FBE5DC /* ChooseSetting */ = {
+			isa = PBXGroup;
+			children = (
+				C549108D26CCEF1F00FBE5DC /* PartOne */,
+				C549108E26CCEF2B00FBE5DC /* PartTwo */,
+			);
+			path = ChooseSetting;
+			sourceTree = "<group>";
+		};
+		C549108D26CCEF1F00FBE5DC /* PartOne */ = {
+			isa = PBXGroup;
+			children = (
+				C549108926CCEF0100FBE5DC /* PartOneViewController.swift */,
+				C549108A26CCEF0100FBE5DC /* PartOneViewController.xib */,
+			);
+			path = PartOne;
+			sourceTree = "<group>";
+		};
+		C549108E26CCEF2B00FBE5DC /* PartTwo */ = {
+			isa = PBXGroup;
+			children = (
+				C549109126CCEF5700FBE5DC /* PartTwoView.swift */,
+				C549108F26CCEF4600FBE5DC /* PartTwoViewController.swift */,
+			);
+			path = PartTwo;
+			sourceTree = "<group>";
+		};
 		C5FD2D4926C3B7B3001D66DF = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +164,7 @@
 				C5FD2D6C26C3BBDB001D66DF /* CreateProfile */,
 				C5FD2D7226C3D36E001D66DF /* MyProfile */,
 				C549103926C66E0100FBE5DC /* Settings */,
+				C549108426CCEE5B00FBE5DC /* ChooseSetting */,
 				C5FD2D6F26C3BF7D001D66DF /* Extensions */,
 				C5FD2D5B26C3B7B3001D66DF /* Main.storyboard */,
 				C5FD2D6126C3B7B5001D66DF /* Assets.xcassets */,
@@ -236,6 +272,7 @@
 			files = (
 				C549104026C6700100FBE5DC /* SettingsTableViewCell.xib in Resources */,
 				C5FD2D6526C3B7B5001D66DF /* LaunchScreen.storyboard in Resources */,
+				C549108C26CCEF0100FBE5DC /* PartOneViewController.xib in Resources */,
 				C5FD2D6226C3B7B5001D66DF /* Assets.xcassets in Resources */,
 				C5FD2D8B26C3FC3B001D66DF /* ProfileViewController.xib in Resources */,
 				C5FD2D5D26C3B7B3001D66DF /* Main.storyboard in Resources */,
@@ -293,12 +330,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5FD2D7A26C3E2FF001D66DF /* ProfileView.swift in Sources */,
+				C549109226CCEF5700FBE5DC /* PartTwoView.swift in Sources */,
+				C549108B26CCEF0100FBE5DC /* PartOneViewController.swift in Sources */,
 				C5FD2D9226C4F658001D66DF /* ImageViewExtensions.swift in Sources */,
 				C5FD2D9426C52313001D66DF /* Profile.swift in Sources */,
 				C5FD2D8A26C3FC3B001D66DF /* ProfileViewController.swift in Sources */,
 				C5FD2D6026C3B7B3001D66DF /* ExampleAllProgrammatically.xcdatamodeld in Sources */,
 				C5FD2D5A26C3B7B3001D66DF /* CreateProfileViewController.swift in Sources */,
 				C549103F26C6700100FBE5DC /* SettingsTableViewCell.swift in Sources */,
+				C549109026CCEF4600FBE5DC /* PartTwoViewController.swift in Sources */,
 				C5FD2D7126C3BF9C001D66DF /* ConstarintsExtensions.swift in Sources */,
 				C5FD2D6E26C3BC43001D66DF /* CreateProfileView.swift in Sources */,
 				C5FD2D5626C3B7B3001D66DF /* AppDelegate.swift in Sources */,

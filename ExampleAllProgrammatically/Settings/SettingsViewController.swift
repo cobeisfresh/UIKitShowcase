@@ -31,12 +31,14 @@ class SettingsViewController: UIViewController {
     }
     
     private func setupView() {
+        settingsTableView.separatorColor = .gray
         settingsTableView.backgroundColor = .black
         navigationView.backgroundColor = .black
         titleLabel.text = "Settings"
         titleLabel.textColor = .white
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.boldSystemFont(ofSize: 30.0)
+        
     }
     
 }
@@ -64,8 +66,8 @@ extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell: SettingsTableViewCell! = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell") as? SettingsTableViewCell
         
-        dismiss(animated: true, completion: nil)
-    
+        let vc = PartOneViewController(title: settings[indexPath.row])
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
